@@ -1,0 +1,421 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 12pt;
+	width: 80%;
+	margin: 28px auto 43px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*Приавила для гибкой медиа flexible media */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/*Правила для адаптивной разметки сайта*/
+
+	.content .cols.col-1,
+	.content .cols.col-2,
+	.content .cols.col-3, 
+	.content .cols.col-4, 
+	.content .cols.col-5, 
+	.content .cols.col-6,
+	.content .cols.col-7,
+	.content .cols.col-8, 
+	.content .cols.col-9,
+	.content .cols.col-10,
+	.content .cols.col-11,
+	.content .cols.col-12 {width: 100%}
+/*Выстраивание стобцов один за другим, выстраивая в строки*/
+	.header .cols, .content .cols, .footer .cols {
+	/*margin: 0 0 1em;
+	padding: 0 1em;*/
+	float: left;
+	/*background-color: red;*/
+}
+/*Постороение ровной сетки без сдвигов, выставление  */
+.header:before,
+.header:after,
+.content:before,
+.content:after,
+.footer:before,
+.footer:after,
+.row:before,
+.row:after {
+	content: " ";
+	display: table;
+}
+/*Очищение от свойства float чтобы стобцы не съезжали*/
+.header:after,
+.content:after,
+.footer:after,
+.row:after {
+	clear: both;
+}	
+
+.clear {
+	padding: 0;
+	clear: both;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*Правила для шапки сайта*/
+/*Правила для контактов*/
+.contacts {
+	position: relative;
+	text-align: right;
+	top: 20px;
+	font-style: italic;
+	color: #c3c0c0;
+	margin-bottom: 30px;
+}
+
+.contacts p:last-child {
+	color: #87ac75;
+}
+/*Правила для главного меню навигации*/
+
+.nav {
+	background-color: #218cc8;
+	margin-bottom: 20px;
+	height: 49px;
+}
+
+.navigation nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	float: left;
+	/*position: relative;*/
+}
+
+.navigation a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 15px 21px;
+	
+}
+
+.navigation a:hover, .navigation a.active  {
+	color: #fff;
+	background-color: #125c87;
+}
+
+.links {
+	padding: 13px 6px;
+	/*margin-top: 13px;
+	margin-right: 6px;*/
+	text-align: right;
+}
+
+.links a {
+	margin: 0 4px;
+}
+
+#mini_menu {
+	display: none;
+}
+
+/*Правила для баннера*/
+
+.banner {
+	text-align: right;
+	/*height: 171px;*/
+	/*height: auto;*/
+	background: url(../images/head.jpg) no-repeat, url(../images/bg.jpg) repeat;
+	/*background: url(../images/bg.jpg) repeat;*/
+	margin-bottom: 20px;
+	padding: 10px 0 15px;
+}
+
+.banner_text {
+	margin: 15px 25px 0 0;
+	/*position: absolute;
+	top: 156px;
+	right: 136px;*/
+	text-align: right;
+}
+
+.banner_text h1 {
+	color: #5390b4;
+	font-size: 110%:;
+}
+.banner_text h3 {
+	color: #91a9bd;
+	font-size: 110%:;
+}
+
+.banner_text a {
+	
+	color: #fff;
+	margin-top: 30px;
+	padding: 10px 22px;
+	background-color: #f28221;
+	text-decoration: none;
+}
+
+.banner_text a {
+	background-color: #f28221;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.banner_text a:hover {
+	background-color: #FF5A00;
+}
+
+
+
+.banner_text div {
+	/*margin-bottom: 30px;*/
+}
+
+/*Правила для верхнего меню навигации главного контента*/
+
+.nav_cont_up {
+	margin: 10px 0 24px;
+}
+
+.nav_cont_up ul li {
+	display: inline-block;
+	list-style-type: none;
+	font-weight: bold;
+}
+
+.nav_cont_up ul li a {
+	display: inline-block;
+	padding: 12px 16px 12px;
+	background: #ededed;
+	border: 1px solid #dededd; 
+	color: #a2a1a1;
+	text-decoration: none;
+}
+
+.nav_cont_up ul li a:hover, .nav_cont_up ul li a.active {
+	background: #dfedf5;
+	border: 1px solid #c5e2f3; 
+	color: #136392;
+}
+
+/*Правила для формы поиска*/
+
+.finding {
+	margin-top: 10px;
+	text-align: right;
+}
+
+.finding form div input {
+	border: 3px solid #c5debb;
+	-webkit-border: 3px solid #c5debb;
+	color: #676767;
+	height: 36px;
+	padding-left: 8px;
+}
+
+.finding form div {
+	display: inline-block;
+	border: 1px solid #a5c796;
+	-webkit-border: 1px solid #a5c796;
+}
+
+.finding form input[type="submit"] {
+	background-color: #c5debb;
+	border: 1px solid #a5c796;
+	-webkit-border: 1px solid #a5c796;
+	color: #637f51;
+	padding: 10px 14px 10px;
+	-webkit-padding: 10px 14px 10px;
+	font-weight: bold;
+	-webkit-border-radius: none;
+	border-radius: none;
+}
+
+.finding form input[type="submit"]:hover {
+	background-color: #4F7648;
+	color: #fff;
+	cursor: pointer;
+}
+
+/*Правила для карточки товара*/
+
+.separator {
+	border-bottom: 1px dashed #b1c7de;
+}
+
+.tovar_title {
+	margin: 20px auto;
+	width: 95%;
+}
+
+.border {
+	border: 1px solid #c5e2f3;
+}
+
+.border:hover {
+	border: 1px solid #b1c7de;
+	box-shadow: 5px 5px 2px 1px #b1c7de;
+	/*transform: scale(1.1);*/
+	/*transition: all 0.5s;*/
+}
+
+.tovar_title.center {
+	margin: 20px auto; 
+}
+
+.tovar_title.right {
+	margin: 20px 0 0 5%;
+}
+
+.tovar_title.left {
+	margin: 20px 5% 0 0;
+}
+
+figure {
+	padding: 0;
+}
+
+figure img {
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 9px solid #dfedf5;
+}
+
+.title {
+	color: #136392;
+	font-weight: bold;
+}
+
+figcaption {
+	margin-top: 10px;
+}
+
+figcaption p.left {
+	color: #444445;
+	font-weight: bold;
+	float: left;
+}
+
+figcaption p.right {
+	color: #444445;
+	font-weight: bold;
+	float: right;
+}
+
+figcaption .left span {
+	color: #4c9242;
+}
+
+figcaption .right span{
+	color: #767575;
+}
+
+/*Правила для нижнего меня навигации*/
+
+.down {
+	background-color: #dfedf5;
+	border: 1px solid #c5e2f3;
+	margin: 20px auto;
+}
+
+.prev_btn a, .next_btn a {
+	text-decoration: none;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 16px 10px;
+	background-color: #a5bfcf;
+}
+
+.prev_btn {
+	text-align: left;
+	padding: 7px;
+}
+
+.next_btn {
+	text-align: right;
+	padding: 7px;
+}
+
+.next_btn a:hover, .prev_btn a:hover, .next_btn a.active{
+	text-decoration: none;
+	display: inline-block;
+	color: #fff;
+	/*padding: 10px 16px 10px; */
+	background-color: #218cc8;
+}
+
+.list_btns {
+	text-align: center;
+}
+
+.list_btns ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 7px;
+}
+
+.list_btns ul li a{
+	color: #fff;
+	display: inline-block;
+	background-color: #218cc8;
+	padding: 10px 16px 10px;
+	text-decoration: none;
+}
+
+.list_btns a:hover, .list_btns a.active{
+	background-color: #125c87;
+}
+
+/*Правила для подвала*/
+.footer {
+	margin-top: 20px;
+}
+
+.footer_left_side p {
+	color: #4f858a;
+	line-height: 25px;
+}
+
+.footer_left_side p a {
+	color: #1e565b;
+	text-decoration: none;
+}
+
+.footer_right_side {
+	text-align: right;
+}
+
+.footer_right_side ul li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.footer_right_side ul li a{
+	color: #4f858a;
+	display: inline-block;
+	text-decoration: none;
+	border-right: 1px solid #4f858a;
+	padding: 0 10px 0 5px;
+}
+
+.footer_right_side ul li:last-child a{
+	border: none;
+}
+
+ .footer_left_side a:hover, .footer_right_side a:hover {
+ 	color: #0029BF;
+ }
+
+
